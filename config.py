@@ -5,14 +5,17 @@ config = dict(
     app_name =              'xxx',
     username =              'xxx',
 
+    # Should we do replies?
+    reply =                 False,
+    
     # Bot History Database
     history_file =          'history.json',
 
     # Blocktogether.com bot link
-    link = 'xxx',
+    link = 					'xxx',
 
     # Repository git link, for whitelist.txt
-    repo =   '',
+    repo =   				'',
 
     # Request timeout throttling
     timeout =               1 * 60,
