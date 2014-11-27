@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-ggfoolbot
-=========
+# foolbot
 
-Twitter Bot that does cute foolish actions
-=======
-foolbot
-=======
+Foolish twitter bot that blocks users based on queries, you can then follow it by using blocktogether.com, because
+all is better than some.
 
-Foolish Twitter Block Bot, based on git, cause algorithms are overrated, honestly filters are better. This does the job though. Proof of Concept.
->>>>>>> ee0173424c3fdf026c7389d1539cd27111c60fb4
+# Features
+
+- Multiple Search terms
+- Whitelist (via git)
+- Block history
