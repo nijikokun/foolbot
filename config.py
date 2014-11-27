@@ -6,16 +6,16 @@ config = dict(
     username =              'xxx',
 
     # Should we do replies?
-    reply =                 False,
-    
+    reply =                 True,
+
     # Bot History Database
     history_file =          'history.json',
 
     # Blocktogether.com bot link
-    link = 					'xxx',
+    link =                  '',
 
     # Repository git link, for whitelist.txt
-    repo =   				'',
+    repo =                  '',
 
     # Request timeout throttling
     timeout =               1 * 60,
