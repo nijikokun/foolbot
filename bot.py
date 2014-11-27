@@ -63,7 +63,7 @@ class FoolishReplyClass(twb.ReplyTemplate):
         user_name  = entity.author.screen_name
         text       = self.render_template(context, entity)
 
-        logging.info('Blocking: %s | %s' % (user_id, user_name, text))
+        logging.info('Blocking: %s | %s' % (user_id, user_name))
         context.api.create_block(id=user_id)
 
     def __call__(self, context, entity):
