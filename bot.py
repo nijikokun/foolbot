@@ -55,16 +55,23 @@ class FoolishReplyClass(twb.ReplyTemplate):
 
     '''Chooses template and appends link to repository'''
     def render_template(self, context, entity):
-        return random.choice(self.templates) % (twb._author(entity), 'http://blocktogether.com/' + config['link'])
+        return random.choice(self.templates).format(twb._author(entity), 'http://blocktogether.com/' + config['link'])
 
     '''Sends direct message generated from template'''
     def reply(self, context, entity):
+        reply_id   = entity.id
         user_id    = entity.author.id
         user_name  = entity.author.screen_name
         text       = self.render_template(context, entity)
 
+        # Block the user
         logging.info('Blocking: %s | %s' % (user_id, user_name))
         context.api.create_block(id=user_id)
+
+        # Reply to the user
+        if config['reply']:
+            context.api.update_status(text, reply_id)
+            logging.info('Replying to tweet %s with %s' % (reply_id, text))
 
     def __call__(self, context, entity):
         try:
