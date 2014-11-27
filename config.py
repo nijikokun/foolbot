@@ -8,6 +8,9 @@ config = dict(
     # Bot History Database
     history_file =          'history.json',
 
+    # Blocktogether.com bot link
+    link = 'xxx',
+
     # Repository git link, for whitelist.txt
     repo =   '',
 

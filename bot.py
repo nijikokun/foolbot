@@ -55,7 +55,7 @@ class FoolishReplyClass(twb.ReplyTemplate):
 
     '''Chooses template and appends link to repository'''
     def render_template(self, context, entity):
-        return random.choice(self.templates) % (twb._author(entity), config['blocklist_repo'])
+        return random.choice(self.templates) % (twb._author(entity), 'http://blocktogether.com/' + config['link'])
 
     '''Sends direct message generated from template'''
     def reply(self, context, entity):
