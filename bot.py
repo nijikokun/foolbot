@@ -79,7 +79,7 @@ class FoolishReplyClass(twb.ReplyTemplate):
             context.history.append(entity.author.id)
             return result
         except tweepy.error.TweepError, e:
-            logging.error('%s | %s' % (entity.author.id, str(e)))
+            logging.error('%s | %s' % (entity.id, str(e)))
             return False
 
 def main():
